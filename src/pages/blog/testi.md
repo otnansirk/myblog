@@ -1,8 +1,8 @@
 ---
 title: Testi
 date: '2019-12-07'
-path: cara-membuat-blog-testi
-thumbnail: /assets/mountain-1345746_1920.jpg
+path: /cara-membuat-blog-testi
+thumbnail: ../../images/gatsby-icon.png
 tags:
   - Coding
   - Blog
