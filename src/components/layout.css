@@ -1,13 +1,200 @@
+@font-face {
+  /* src: url(../fonts/BarlowSemiCondensed-Regular.ttf); */
+  src: url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap);
+  font-family: 'Poppins', sans-serif;
+}
+.hidden {
+  display: none;
+}
 html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  font: 110%/1.5em georgia, serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+* {
+  box-sizing: inherit;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
 }
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0px auto;
+  background-color: rgb(250, 250, 250);
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: 'Poppins', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important; */
+  list-style: none !important;
+  font-weight: 400 !important;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
 }
+header {
+  background: #ffffff;
+  margin-bottom: 1.45rem;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  z-index: 1;
+}
+.header-menu {
+  float: right;
+  width:12em;
+}
+.header-menu span{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: -25px;
+}
+.header-menu span a{
+  font-size: 14px;
+  font-weight:bold;
+  color: #333333eb;
+}
+
+header h1,a {
+  margin: 0;
+  color:#007fea;
+  font-size: 26px;
+}
+
+.jumbotron {
+  color:#7b7b7b;
+  height: 25em;
+  padding: 9em 1.5em 0.5em 1.5em;
+  width: 100%;
+  background-color:#dedede;
+}
+main {
+  margin: 0 auto;
+  max-width: 100%;
+  min-height: 50em;
+}
+.post-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center
+}
+
+.post-card {
+  cursor: pointer;
+  background-color: #ffffff;
+  color:rgb(156, 154, 154);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+  width: 300px;
+  margin: 30px;
+}
+.post-card .post-image {
+  width:100%;
+  height:6em;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.post-card:hover {
+  
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.10);
+}
+.post-title {
+  color:rgb(114, 114, 114);
+}
+.post-card:hover  .post-title{
+  color:rgb(85, 85, 85);
+}
+
+.post-container {
+  padding: 2px 16px;
+}
+
+.content-wrapper {
+  padding-top:100px;
+  margin: auto;
+  width: 90%;
+  display:flex;
+  justify-content: space-between;
+}
+
+.single-post-wrapper {
+  width: 68%;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0, 0.02);
+  color: #6b6c6d;
+}
+.single-post-content {
+  padding: 20px;
+}
+.single-post-content h2 {
+  font-size: 2.5rem;
+}
+.single-post-wrapper .single-post-img{
+  height: 340px;
+}
+.single-right-bar {
+  width: 30%;
+}
+.single-post-wrapper small {
+  color:rgba(0,0,0,0.38)
+}
+
+.single-post-wrapper p {
+  font-size: 18px;
+}
+.single-post-wrapper small ul{
+  display: flex;
+  width: 15em;
+  justify-content: space-between;
+}
+
+.single-right-tags-wrapper {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0, 0.02);
+  padding: 10px;
+}
+
+.single-right-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0px;
+}
+
+.single-right-tags li{
+  list-style: none;
+}
+
+.recent-post {
+  margin: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.recent-post-img {
+  width: 90px;
+  height:90px
+}
+.recent-post-body {
+  width: 210px;
+  left: 0;
+  margin-left:10px
+}
+
+label {
+  padding: 5px;
+  color: #ffffff;
+  border: 1px solid #ff69af;
+  border-radius: 2px;
+  font-size: 14px;
+  background-color: #ff69af;
+  margin: 5px;
+}
+
 article,
 aside,
 details,
@@ -40,6 +227,7 @@ template {
   display: none;
 }
 a {
+  text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
@@ -100,11 +288,7 @@ samp {
 figure {
   margin: 1em 40px;
 }
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
+
 button,
 input,
 optgroup,
@@ -184,31 +368,6 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
-html {
-  font: 112.5%/1.45em georgia, serif;
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
-* {
-  box-sizing: inherit;
-}
-*:before {
-  box-sizing: inherit;
-}
-*:after {
-  box-sizing: inherit;
-}
-body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
-}
 img {
   max-width: 100%;
   margin-left: 0;
@@ -229,9 +388,7 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: #44609e;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -247,8 +404,6 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -264,8 +419,6 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -281,12 +434,11 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   line-height: 1.1;
+  color: #5c5ba0;
 }
 h5 {
   margin-left: 0;
@@ -298,8 +450,6 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -315,8 +465,6 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -384,6 +532,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
+  font-size: 16px;
   margin-bottom: 1.45rem;
 }
 figure {
@@ -482,7 +631,7 @@ hr {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
+  background: hsla(0, 0%, 0%, 0.05);
   border: none;
   height: 1px;
 }
@@ -615,8 +764,52 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-@media only screen and (max-width: 480px) {
+
+footer {
+  height: 50px;
+  background: #000;
+  width:100%;
+  color: #dedede;
+  padding: 2em;
+  /* position: absolute; */
+  bottom: 0;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
   html {
     font-size: 100%;
+  }
+  .post-card {
+    margin: 20px;
+    width: 90%;
+  }
+
+  .content-wrapper {
+    display:inline;
+    justify-content: space-between;
+  }
+  .single-post-wrapper {
+    padding-top:80px;
+    width: 100%;
+  }
+  .single-right-bar {
+    width: 100%;
+  }
+  .recent-post {
+    margin: 15px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .recent-post-body {
+    margin-left:10px;
+  }
+  main {
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 50em;
+  }
+  .m-left-10 {
+    margin-left: 10px;
   }
 }

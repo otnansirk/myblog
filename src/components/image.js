@@ -13,10 +13,13 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
+const Image = (imageInfo) => {
+  // const { alt = '', childImageSharp, src } = imageInfo
+  console.log("KRISNANTO")
+  // console.log(src)
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      placeholderImage: file(relativePath: { eq: "image.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -25,7 +28,7 @@ const Image = () => {
       }
     }
   `)
-
+console.log(data)
   return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
