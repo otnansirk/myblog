@@ -3,7 +3,7 @@ backend:
   branch: master
 
 media_folder: src/pages/blog/assets
-public_folder: /assets
+public_folder: assets
 
 collections:
   - name: "blog"
