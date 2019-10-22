@@ -5,8 +5,14 @@ module.exports = {
     author: `krisnanto`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify-cms`,
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `upload`,
+        path: `${__dirname}/static/assets`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -21,8 +27,8 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -36,6 +42,30 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static',
+            },
+          },
+          'gatsby-remark-relative-images',
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+            }
+          }
+        ]
+      }
+    },
+    `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

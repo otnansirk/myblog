@@ -16,7 +16,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "string" }
-      - { label: "Path", name: "path", widget: "string" }
+      - { label: "Path", name: "path", widget: "string", default: "{{title}}"}
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Tags", name: "tags", widget: "list", default: ["Coding"]}
       - { label: "Label", name: "label", widget: "string"}

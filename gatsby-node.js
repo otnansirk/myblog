@@ -1,5 +1,5 @@
 const path = require('path')
-
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -45,5 +45,9 @@ exports.createPages = ({ actions, graphql }) => {
       });
     })
 }
+
+exports.onCreateNode = ({ node }) => {
+  fmImagesToRelative(node);
+};
 
 // exports.createPages = ({graphql, actions, reporter})
