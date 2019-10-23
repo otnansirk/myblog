@@ -1,6 +1,6 @@
 ---
 date: '2019-10-01'
-path: semunya cerita
+path: /semunya-cerita
 thumbnail: /assets/mountain-1345746_1920.jpg
 tags:
   - Coding
