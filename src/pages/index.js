@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => (
     <Jumbotron className={'jumbotron'}></Jumbotron>
     <center>
       <br />
-      <h1>Artikel Popular</h1>
+      <h2>Semua Artikel</h2>
     </center>
     <SEO title="Home" />
     <div className="post-content">
@@ -33,9 +33,6 @@ export const query = graphql`
         node {
           excerpt(pruneLength: 250)
           id
-          fields {
-            slug
-          }
           ...IndexPostFragment
         }
       }

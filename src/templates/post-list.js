@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import GenerateTitle from '../components/CleanPath'
 
 const postList = ({ frontmatter: payload}) => {
   return (
@@ -16,7 +17,7 @@ const postList = ({ frontmatter: payload}) => {
         <div className="post-container">
           <br/>
           <span className="post-title">
-              { payload.frontmatter.title.substring(0, 50) }...
+            { GenerateTitle(payload.frontmatter.path) }
           </span>
           <br/>
           <small style={{color: `#757575`, fontSize:`14px`}}>
@@ -40,7 +41,6 @@ export const query = graphql`
   fragment IndexPostFragment on MarkdownRemark {
     frontmatter {
       date(formatString: "MMMM DD, YYYY")
-      title
       label
       path
       thumbnail {

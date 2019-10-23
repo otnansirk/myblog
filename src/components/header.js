@@ -16,12 +16,6 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <div className="header-menu">
-        <span>
-          <Link to="now">NOW</Link>
-          <Link to="now">ABOUT</Link>
-        </span>
-      </div>
     </div>
   </header>
 )

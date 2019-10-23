@@ -22,7 +22,7 @@ html {
 }
 body {
   margin: 0px auto;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(250, 250, 250, 0.25);
   color: hsla(0, 0%, 0%, 0.8);
   font-family: 'Poppins', sans-serif;
   /* font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important; */
@@ -65,11 +65,14 @@ header h1,a {
 }
 
 .jumbotron {
-  color:#7b7b7b;
+  color:#ffffff;
   height: 25em;
   padding: 9em 1.5em 0.5em 1.5em;
   width: 100%;
-  background-color:#dedede;
+  background-color:hsl(56, 86%, 58%);
+  background-image: url('./bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 main {
   margin: 0 auto;
@@ -85,13 +88,14 @@ main {
 
 .post-card {
   cursor: pointer;
+  /* #007bff */
   background-color: #ffffff;
   color:rgb(156, 154, 154);
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.10) !important;
   transition: 0.3s;
-  width: 300px;
-  margin: 30px;
+  width: 350px;
+  margin: 20px;
 }
 .post-card .post-image {
   width:100%;
@@ -101,7 +105,7 @@ main {
 }
 .post-card:hover {
   
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.15) !important;
 }
 .post-title {
   color:rgb(114, 114, 114);
@@ -393,7 +397,7 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: #44609e;
+  color: #ffffff;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -817,4 +821,18 @@ footer {
   .m-left-10 {
     margin-left: 10px;
   }
+}
+
+@media only screen and (min-width: 768px) {
+ 
+.jumbotron {
+  color:red;
+  height: 25em;
+  padding: 9em 1.5em 0.5em 1.5em;
+  width: 100%;
+  background-color:hsl(56, 86%, 58%);
+  background-image: url('./bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 }

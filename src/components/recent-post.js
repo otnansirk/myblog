@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
+import GenerateTitle from './CleanPath'
 
 const recentPost = ({ frontmatter: payload }) => {
-  // console.log(payload)
   return (
     <Link 
       to={payload.frontmatter.path}
@@ -14,7 +14,9 @@ const recentPost = ({ frontmatter: payload }) => {
           fluid={payload.frontmatter.thumbnail.childImageSharp.fluid}
         />
         <div className="recent-post-body">
-          <h4>{payload.frontmatter.title.substring(0, 50)}...</h4>
+          <h4>
+            { GenerateTitle(payload.frontmatter.path) }
+          </h4>
           <p>{ payload.excerpt.substring(0, 88) }...</p>
         </div>
       </div>
@@ -25,7 +27,6 @@ const recentPost = ({ frontmatter: payload }) => {
 export const recentQuery = graphql`
   fragment RecentPost on MarkdownRemark {
     frontmatter {
-      title
       date
       path
       thumbnail {

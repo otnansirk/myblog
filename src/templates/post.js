@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import RecentPost from "../components/recent-post"
 import Img from 'gatsby-image';
 import SEO from '../components/seo';
+import GenerateTitle from '../components/CleanPath'
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data;
@@ -19,18 +20,23 @@ export default function Template({ data }) {
           fluid={ post.frontmatter.thumbnail.childImageSharp.fluid }
         />
         <div className="single-post-content">
-          <h2>{ post.frontmatter.title }</h2>
+          <h2>
+            { GenerateTitle(post.frontmatter.path) }
+          </h2>
+            <small style={{color: `#757575`, fontSize:`14px`}}>
+              <label>{post.frontmatter.label}</label>&nbsp;&nbsp;&nbsp;
+            </small>
             <small>
-              <span>By <b>{post.frontmatter.author}</b></span>
+              <span><b>{post.frontmatter.author}</b></span>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span>{post.frontmatter.date}</span>
             </small>
-          <hr/>
+          <hr />
           <p dangerouslySetInnerHTML={{ __html: post.html }} ></p>
         </div>
         </div>
         <div className="single-right-bar">
-          <b className="m-left-10">Recent Post</b>
+          <b className="m-left-10">Artikel Terbaru</b>
           <div className="recent-post-wrapper single-right-tags-wrapper">
             {recentPost.edges.map(({ node }) => (
               <span key={node.id}>
@@ -63,8 +69,8 @@ export const postQuery = graphql`
       frontmatter {
         path
         date(formatString: "MMMM DD, YYYY")
-        title
         tags
+        label
         author
         thumbnail {
           childImageSharp {
