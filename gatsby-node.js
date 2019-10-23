@@ -1,5 +1,7 @@
 const path = require('path')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+const { createFilePath } = require(`gatsby-source-filesystem`)
+
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -49,3 +51,15 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node }) => {
   fmImagesToRelative(node);
 };
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+}

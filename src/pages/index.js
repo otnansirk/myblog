@@ -33,6 +33,9 @@ export const query = graphql`
         node {
           excerpt(pruneLength: 250)
           id
+          fields {
+            slug
+          }
           ...IndexPostFragment
         }
       }
