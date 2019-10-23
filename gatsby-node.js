@@ -49,5 +49,3 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node }) => {
   fmImagesToRelative(node);
 };
-
-// exports.createPages = ({graphql, actions, reporter})

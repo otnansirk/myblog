@@ -184,6 +184,11 @@ main {
   left: 0;
   margin-left:10px
 }
+.recent-post-body p {
+  margin-top: -25px;
+  font-size: 15px;
+  color: #7b7b7b;
+}
 
 label {
   padding: 5px;

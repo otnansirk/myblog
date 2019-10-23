@@ -52,7 +52,12 @@ module.exports = {
               destinationDir: 'static',
             },
           },
-          'gatsby-remark-relative-images',
+          {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              destinationDir: 'upload',
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
