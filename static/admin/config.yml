@@ -10,11 +10,11 @@ collections:
     label: "Blog"
     folder: "src/pages/blog"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     editor:
      preview: true
     fields:
-      - { label: "Date", name: "date", widget: "string", default: "`r format(Sys.time(), '%Y-%B-%d')`"}
+      - { label: "Date", name: "date", widget: "date", required: false, format: "YYY-MM-DD"}
       - { label: "Slug", name: "path", widget: "string", default: "/slug-format" }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Tags", name: "tags", widget: "list", default: ["Coding" ]}
