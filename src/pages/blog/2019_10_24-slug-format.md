@@ -1,7 +1,7 @@
 ---
 date: '2019-10-24 22:48'
 path: /slug-format
-thumbnail: /assets/default-image.png
+thumbnail: /assets/image-test.png
 tags:
   - Belajar Laravel
   - Belajar Koding
