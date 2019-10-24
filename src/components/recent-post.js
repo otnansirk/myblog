@@ -15,9 +15,9 @@ const recentPost = ({ frontmatter: payload }) => {
         />
         <div className="recent-post-body">
           <h4>
-            { GenerateTitle(payload.frontmatter.path) }
+            { GenerateTitle(payload.frontmatter.path).substring(0, 26) }...
           </h4>
-          <p>{ payload.excerpt.substring(0, 88) }...</p>
+          <p>{ payload.excerpt.substring(0, 25) }...</p>
         </div>
       </div>
     </Link>

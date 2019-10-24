@@ -14,10 +14,10 @@ collections:
     editor:
      preview: true
     fields:
-      - { label: "Date", name: "date", widget: "string" }
-      - { label: "Slug", name: "path", widget: "string" }
+      - { label: "Date", name: "date", widget: "string", default: "`r format(Sys.time(), '%Y-%B-%d')`"}
+      - { label: "Slug", name: "path", widget: "string", default: "/slug-format" }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["Coding"]}
-      - { label: "Label", name: "label", widget: "string"}
-      - { label: "Author", name: "author", widget: "string", default: "Kris"}
+      - { label: "Tags", name: "tags", widget: "list", default: ["Coding" ]}
+      - { label: "Label", name: "label", widget: "string", default: "PHP, NodeJs, Js, Jekyll, Terminal, Linux, Ubuntu" }
+      - { label: "Author", name: "author", widget: "string", default: "Kris" }
       - { label: "Body", name: "body", widget: "markdown"}
