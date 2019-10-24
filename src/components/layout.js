@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-
 import './gatsby-highlight-code-line.css'
 
 const Layout = ({ children }) => {
@@ -27,7 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />     
+      <Header siteTitle={data.site.siteMetadata.title} /> 
       <div>
         <main>{children}</main>
       </div>

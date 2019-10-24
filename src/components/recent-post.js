@@ -5,7 +5,8 @@ import GenerateTitle from './CleanPath'
 
 const recentPost = ({ frontmatter: payload }) => {
   return (
-    <Link 
+    <Link
+      nClick="window.location.reload();"
       to={payload.frontmatter.path}
     >
       <div className="recent-post">

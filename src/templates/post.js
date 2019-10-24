@@ -33,6 +33,15 @@ export default function Template({ data }) {
             </small>
           <hr />
           <p dangerouslySetInnerHTML={{ __html: post.html }} ></p>
+          <div>
+            <hr />
+            <center>
+              <span className="m-left-10 title-section-sidebar">
+                Kamu Suka Artikel ini ? Yuk Bantu Bagikan Ke Temanmu :)
+              </span>
+            </center><br/>
+            <div class="sharethis-inline-share-buttons"></div>
+          </div>
         </div>
         </div>
         <div className="single-right-bar">
