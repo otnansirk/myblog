@@ -10,16 +10,60 @@ collections:
     label: "Blog"
     folder: "src/pages/blog"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    slug: "{{year}}_{{month}}_{{day}}{{slug}}"
     editor:
      preview: true
     fields:
-      - { label: "Date", name: "date", widget: "date", required: false, format: "YYY-MM-DD"}
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          dateFormat: 'YYYY-MM-DD',
+          timeFormat: 'HH:mm',
+          format: 'YYYY-MM-DD HH:mm',
+        }
       - { label: "Slug", name: "path", widget: "string", default: "/slug-format" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["Coding" ]}
-
-      - { label: "Label", name: "label", widget: "select", options: ["PHP, NodeJs, Js, Jekyll, Terminal, Linux, Ubuntu"] }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image", default: "/assets/default-image.png" }
+      - { 
+          label: "Tags", 
+          name: "tags", 
+          widget: "list",
+          default: [
+            "Belajar Laravel",
+            "Belajar Koding",
+            "Atom Editor",
+            "Belajar Codeigniter",
+            "Belajar Jekyll",
+            "Belajar Flutter",
+            "Belajar JavaScript",
+            "Belajar Laravel",
+            "CI 4 Codeigniter",
+            "Codeigniter 4",
+            "Belajar CSS",
+            "Belajar Git",
+            "Belajar Slim",
+            "VS Code Editor"
+          ]
+        }
+      - { 
+          label: "Label", 
+          name: "label", 
+          widget: "select", 
+          options: [
+            "PHP", 
+            "NodeJs", 
+            "Js", 
+            "Jekyll", 
+            "Terminal", 
+            "Linux", 
+            "Ubuntu",
+            "Laravel",
+            "VueJs",
+            "ReactJs",
+            "GatsbyJs",
+            "Lumen"
+          ]
+        }
       
       - { label: "Author", name: "author", widget: "string", default: "Kris" }
       - { label: "Body", name: "body", widget: "markdown"}
