@@ -1,7 +1,7 @@
 ---
-date: 2017-07-12
+date: '2017-07-12 22:48'
 path: '/say-hello'
-thumbnail: 'images/image-test.png'
+thumbnail: 'images/default-image.png'
 tags: ['Hello']
 label: 'Hello'
 author: 'Admin'
