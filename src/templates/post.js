@@ -20,7 +20,7 @@ export default function Template({ data }) {
           fluid={ post.frontmatter.thumbnail.childImageSharp.fluid }
         />
         <div className="single-post-content">
-          <h2>
+          <h2 className="title">
             { GenerateTitle(post.frontmatter.path) }
           </h2>
             <small style={{color: `#757575`, fontSize:`14px`}}>
@@ -36,7 +36,7 @@ export default function Template({ data }) {
         </div>
         </div>
         <div className="single-right-bar">
-          <b className="m-left-10">Artikel Terbaru</b>
+          <span className="m-left-10 title-section-sidebar">Artikel Terbaru</span>
           <div className="recent-post-wrapper single-right-tags-wrapper">
             {recentPost.edges.map(({ node }) => (
               <span key={node.id}>
@@ -45,12 +45,12 @@ export default function Template({ data }) {
             ))}
           </div>
 
-          <b className="m-left-10">Tags</b>
+          <span className="m-left-10 title-section-sidebar">Tags</span>
           <div className="single-right-tags-wrapper">
             <ul className="single-right-tags">
               {post.frontmatter.tags.map((tag, index) => (
                 <li key={index}>
-                  <label>{ tag }</label>
+                  <small><label>{ tag }</label></small>
                 </li>
               ))}
             </ul>

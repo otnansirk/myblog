@@ -12,6 +12,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
+import './gatsby-highlight-code-line.css'
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -35,9 +37,11 @@ const Layout = ({ children }) => {
         <a 
           style={{
             color: `#ffffff`,
-            fontSize: `16px`
+            fontSize: `14px`
           }}
-        href="https://www.kodingmu.com">kodingmu</a>
+        href="https://www.kodingmu.com">
+          kodingmu
+        </a>
       </footer>
     </>
   )

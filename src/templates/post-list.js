@@ -16,7 +16,7 @@ const postList = ({ frontmatter: payload}) => {
         </div>
         <div className="post-container">
           <br/>
-          <span className="post-title">
+          <span className="post-title title">
             { GenerateTitle(payload.frontmatter.path) }
           </span>
           <br/>
