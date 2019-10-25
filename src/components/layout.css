@@ -796,8 +796,15 @@ footer {
   html {
     font-size: 100%;
   }
+  .post-wrap {
+    display: contents;
+    flex-wrap: unset;
+    margin: 0 auto;
+    justify-content: center
+  }
   .post-card {
     margin: 20px;
+    align-content: center;
     width: 90%;
   }
 
