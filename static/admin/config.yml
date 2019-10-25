@@ -61,7 +61,8 @@ collections:
             "VueJs",
             "ReactJs",
             "GatsbyJs",
-            "Lumen"
+            "Lumen",
+            "Network"
           ]
         }
       
