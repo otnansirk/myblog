@@ -62,7 +62,8 @@ collections:
             "ReactJs",
             "GatsbyJs",
             "Lumen",
-            "Network"
+            "Network",
+            "GIT"
           ]
         }
       
