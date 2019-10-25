@@ -36,7 +36,7 @@
  
  :not(pre) > code[class*="language-"],
  pre[class*="language-"] {
-   background: #213458;
+   background: #29467a;
  }
  
  /* Inline code */
@@ -158,7 +158,7 @@
      font-weight: normal;
    }
  }
- pre.line-numbers {
+ /* pre.line-numbers {
 	position: relative;
 	padding-left: 3.8em;
 	counter-reset: linenumber;
@@ -197,4 +197,4 @@ pre.line-numbers > code {
 			display: block;
 			padding-right: 0.8em;
 			text-align: right;
-}
+} */

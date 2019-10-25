@@ -9,7 +9,7 @@ import GenerateTitle from '../components/CleanPath'
 export default function Template({ data }) {
   const { markdownRemark: post } = data;
   const { allMarkdownRemark: recentPost } = data;
-  
+
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
@@ -32,7 +32,7 @@ export default function Template({ data }) {
               <span>{post.frontmatter.date}</span>
             </small>
           <hr />
-          <p dangerouslySetInnerHTML={{ __html: post.html }} ></p>
+          <p className="post-body" dangerouslySetInnerHTML={{ __html: post.html }} ></p>
           <div>
             <hr />
             <center>
@@ -64,6 +64,11 @@ export default function Template({ data }) {
                   <small><label>{ tag }</label></small>
                 </li>
               ))}
+              {data.site.siteMetadata.topic.map((tag, index) => (
+                <li key={index}>
+                  <small><label>{ tag }</label></small>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -74,6 +79,11 @@ export default function Template({ data }) {
 
 export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
+    site {
+      siteMetadata {
+        topic
+      }
+    },
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       id
