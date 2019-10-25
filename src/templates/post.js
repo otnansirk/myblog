@@ -56,7 +56,7 @@ export default function Template({ data }) {
             ))}
           </div>
 
-          <span className="m-left-10 title-section-sidebar">Tags</span>
+          <span className="m-left-10 title-section-sidebar">Pembahasan</span>
           <div className="single-right-tags-wrapper">
             <ul className="single-right-tags">
               {post.frontmatter.tags.map((tag, index) => (
