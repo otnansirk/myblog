@@ -1,7 +1,7 @@
 ---
 date: '2019-10-25 20:41'
 path: /NAS-atau-network-attached-storage-bisa-jadi-solusi-cloud-pribadi
-thumbnail: images/default-image.png
+thumbnail: /assets/learn-1-.png
 tags:
   - Belajar Laravel
   - Belajar Koding
