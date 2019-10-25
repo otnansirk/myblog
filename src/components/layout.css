@@ -792,20 +792,19 @@ footer {
   font-size: 14px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 780px) {
   html {
     font-size: 100%;
   }
   .post-wrap {
-    display: contents;
-    flex-wrap: unset;
+    display: block;
     margin: 0 auto;
-    justify-content: center
+    justify-content: center;
   }
   .post-card {
     margin: 20px;
     align-content: center;
-    width: 90%;
+    width: 95%;
   }
 
   .content-wrapper {

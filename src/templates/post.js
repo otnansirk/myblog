@@ -39,8 +39,10 @@ export default function Template({ data }) {
               <span className="m-left-10 title-section-sidebar">
                 Kamu Suka Artikel ini ? Yuk Bantu Bagikan Ke Temanmu :)
               </span>
-            </center><br/>
-            <div class="sharethis-inline-share-buttons"></div>
+              <br/>
+                <div class="sharethis-inline-share-buttons"></div>
+              <br/>
+            </center>
           </div>
         </div>
         </div>
