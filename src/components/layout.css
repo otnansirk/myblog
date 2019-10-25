@@ -806,12 +806,16 @@ footer {
   .post-card {
     margin: 20px;
     align-content: center;
-    width: 90%
+    width: 94%
   } 
 
   .content-wrapper {
     display:inline;
     justify-content: space-between;
+  }
+
+  .single-post-content {
+    padding: 10px;
   }
   .single-post-wrapper {
     padding-top:80px;
