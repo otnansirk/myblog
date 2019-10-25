@@ -193,11 +193,21 @@ main {
 
 label {
   padding: 5px;
-  color: #ffffff;
-  border: 1px solid #ff69af;
+  color: #3656af;
+  border: 1px solid #3656af;
   border-radius: 2px;
   font-size: 14px;
-  background-color: #ff69af;
+  background-color: #ffffff;
+  margin: 5px;
+}
+
+.label-block {
+  padding: 5px;
+  color: #ffffff;
+  border: 1px solid #2f70e0;
+  border-radius: 2px;
+  font-size: 14px;
+  background-color: #327afa;
   margin: 5px;
 }
 

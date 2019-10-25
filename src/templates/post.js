@@ -24,7 +24,7 @@ export default function Template({ data }) {
             { GenerateTitle(post.frontmatter.path) }
           </h2>
             <small style={{color: `#757575`, fontSize:`14px`}}>
-              <label>{post.frontmatter.label}</label>&nbsp;&nbsp;&nbsp;
+              <label className="label-block">{post.frontmatter.label}</label>&nbsp;&nbsp;&nbsp;
             </small>
             <small>
               <span><b>{post.frontmatter.author}</b></span>

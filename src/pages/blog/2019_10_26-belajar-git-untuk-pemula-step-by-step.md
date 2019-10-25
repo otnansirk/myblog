@@ -1,7 +1,7 @@
 ---
 date: '2019-10-26 00:26'
 path: /belajar-git-untuk-pemula-step-by-step
-thumbnail: /assets/learn-3-.png
+thumbnail: images/default-image.png
 tags:
   - Belajar Laravel
   - Belajar Koding

@@ -21,7 +21,7 @@ const menu = ({ frontmatter: payload}) => {
           </span>
           <br/>
           <small style={{color: `#757575`, fontSize:`14px`}}>
-              <label>{payload.frontmatter.label}</label>&nbsp;
+              <label className="label-block">{payload.frontmatter.label}</label>&nbsp;
               {payload.frontmatter.date}
           </small>
           <br/>
