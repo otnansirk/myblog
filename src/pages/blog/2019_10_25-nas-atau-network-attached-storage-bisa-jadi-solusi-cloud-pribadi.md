@@ -18,7 +18,7 @@ tags:
   - Belajar Slim
   - VS Code Editor
   - Mengenal NAS
-label: Ubuntu
+label: Network
 author: Kris
 ---
 NAS adalah singkatan dari Network Attached Storage yaitu sebuah penyimpanan data yang dapat diakses memalui jaringan biasanya dengan protokol TCP/IP.
