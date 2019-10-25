@@ -18,7 +18,7 @@ const menu = ({ frontmatter: payload}) => {
         <div className="post-container">
           <br/>
           <span className="post-title title">
-              { GenerateTitle(payload.frontmatter.path) }
+              { GenerateTitle(payload.frontmatter.path).substring(0, 50) }...
           </span>
           <br/>
           <small style={{color: `#757575`, fontSize:`14px`}}>

@@ -1,6 +1,6 @@
 
 const path = (path) => {
-    const title = path.replace(/-|\//g, ' ').substring(0, 50)
+    const title = path.replace(/-|\//g, ' ')
     return title
 }
 
