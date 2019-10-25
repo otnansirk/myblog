@@ -17,7 +17,7 @@ tags:
   - Belajar Git
   - Belajar Slim
   - VS Code Editor
-label: Linux
+label: GIT
 author: Kris
 ---
 Beberapa hari yang lalu saya coba buka-buka repository github dari serior saya
