@@ -11,7 +11,7 @@ import ShareButton from '../components/share-button'
 export default function Template({ data }) {
   const { markdownRemark: post } = data;
   const { allMarkdownRemark: recentPost } = data;
-  
+
   return (
     <Layout>
       <SEO title={ GenerateTitle(post.frontmatter.path) } description={post.excerpt} />
@@ -65,11 +65,14 @@ export default function Template({ data }) {
           <span className="m-left-10 title-section-sidebar">Pembahasan</span>
           <div className="single-right-tags-wrapper">
             <ul className="single-right-tags">
-              {post.frontmatter.tags.map((tag, index) => (
-                <li key={index}>
-                  <small><label>{ tag }</label></small>
-                </li>
-              ))}
+              {
+                  post.frontmatter.tags.length !== 1 ?
+                  post.frontmatter.tags.map((tag, index) => (
+                  <li key={index}>
+                    <small><label>{ tag }</label></small>
+                  </li>
+                )) : ''
+              }
               {data.site.siteMetadata.topic.map((tag, index) => (
                 <li key={index}>
                   <small><label>{ tag }</label></small>
