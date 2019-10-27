@@ -32,7 +32,8 @@ export default function Template({ data }) {
               <span>{post.frontmatter.date}</span>
             </small>
           <hr />
-          <p className="post-body" dangerouslySetInnerHTML={{ __html: post.html }} ></p>
+          {/* <p className="post-body" dangerouslySetInnerHTML={{ __html: post.html }} ></p> */}
+          <p className="post-body"> { post.excerpt } </p>
           <div>
             <hr />
             <center>
@@ -86,6 +87,7 @@ export const postQuery = graphql`
     },
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      excerpt
       id
       frontmatter {
         path
@@ -102,7 +104,7 @@ export const postQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(limit:5) {
+    allMarkdownRemark(limit:4) {
       totalCount
       edges {
         node {

@@ -28,7 +28,7 @@ const menu = ({ frontmatter: payload}) => {
           <br/>
 
           <p>
-            { payload.excerpt.substring(0, 88) } ...
+            { payload.excerpt.substring(0, 88) }...
           </p>
         </div>
       </div>
