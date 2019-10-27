@@ -22,7 +22,7 @@ const shareButton = () => {
 
       <FacebookShareButton
         className="button__share button__fb"
-        url={window.location.href}
+        url="window.location.href"
       >
         <FacebookIcon className="button__share-button" size={30} borderRadius={5} />
       </FacebookShareButton>

@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    baseUrl: `https://distracted-euclid-5f96b2.netlify.com/`,
     title: `Kodingmu`,
     description: `Belajar Koding Gakpake Ribet.`,
     author: `krisnanto`,
