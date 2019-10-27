@@ -14,10 +14,11 @@ dan saya menemukan kembali E-book yang menjadi dasar saya belajar git dengan jud
 
 > Hallo, [@akuikialie](https://github.com/akuikialie)_<br>
 > _Nama aslinya adalah "Achmad Ali Liesmana", Seorang backend developer di salah satu perusahaan Muslim di surabaya._
-> Enaknya pake git bisa membuat versioning di dalam project kerja kita. dan git tidak juga digunakan untuk versioning source code.
-> Tapi, juga bisa untuk kalian para `mahasiswa` yang sedang melakukan tugas panjang. seperti `scripsi`. <br>
-> Misal saja kita membuat laporan di dalam MS-Word, kita bisa memanfaatkan `git` ini untuk versioning scripsi kita,
-> Jadi tidak perlu takut data hilang, kedelete dll. Karena git akan menyimpan perubahan-perubahan walau hanya satu space saja.
+
+Enaknya pake git bisa membuat versioning di dalam project kerja kita. dan git tidak juga digunakan untuk versioning source code.
+Tapi, juga bisa untuk kalian para `mahasiswa` yang sedang melakukan tugas panjang. seperti `scripsi`. <br>
+Misal saja kita membuat laporan di dalam MS-Word, kita bisa memanfaatkan `git` ini untuk versioning scripsi kita,
+Jadi tidak perlu takut data hilang, kedelete dll. Karena git akan menyimpan perubahan-perubahan walau hanya satu space saja.
 
 Untuk teori seperti apa itu git ?<br>
 Dan lain-lainnya bisa di baca detail di google 😄 atau bisa juga di [git-pinter](https://github.com/akuikialie/git-pinter/blob/master/git-pinter.pdf).(mastahku)
