@@ -6,11 +6,12 @@ import Img from 'gatsby-image';
 import SEO from '../components/seo';
 import GenerateTitle from '../components/CleanPath'
 import Parser from 'html-react-parser';
+import ShareButton from '../components/share-button'
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data;
   const { allMarkdownRemark: recentPost } = data;
-
+  
   return (
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt} />
@@ -43,7 +44,9 @@ export default function Template({ data }) {
                 Kamu Suka Artikel ini ? Yuk Bantu Bagikan Ke Temanmu :)
               </span>
               <br/>
-                <div class="sharethis-inline-share-buttons"></div>
+                <div>
+                  <ShareButton></ShareButton>
+                </div>
               <br/>
             </center>
           </div>

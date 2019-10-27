@@ -1,0 +1,13 @@
+.button__share {
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 4px;
+    font-size: 12px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.button__share:hover:not(:active) {
+    opacity: 0.75;
+}
