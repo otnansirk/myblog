@@ -5,6 +5,7 @@ import RecentPost from "../components/recent-post"
 import Img from 'gatsby-image';
 import SEO from '../components/seo';
 import GenerateTitle from '../components/CleanPath'
+import Parser from 'html-react-parser';
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data;
@@ -32,9 +33,9 @@ export default function Template({ data }) {
               <span>{post.frontmatter.date}</span>
             </small>
           <hr />
-          <p className="post-body">{post.html}</p>
-          <p className="post-body" dangerouslySetInnerHTML={{ __html: post.html }} ></p>
-          <p className="post-body"> { post.excerpt } </p>
+          <p className="post-body">
+            {Parser(post.html)}
+          </p>
           <div>
             <hr />
             <center>
