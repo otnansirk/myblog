@@ -14,7 +14,7 @@ export default function Template({ data }) {
   
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
+      <SEO title={ GenerateTitle(post.frontmatter.path) } description={post.excerpt} />
       <div className="content-wrapper">
         <div className="single-post-wrapper">
         <Img
@@ -34,9 +34,9 @@ export default function Template({ data }) {
               <span>{post.frontmatter.date}</span>
             </small>
           <hr />
-          <p className="post-body">
+          <div className="post-body">
             {Parser(post.html)}
-          </p>
+          </div>
           <div>
             <hr />
             <center>
@@ -45,7 +45,7 @@ export default function Template({ data }) {
               </span>
               <br/>
                 <div>
-                  <ShareButton></ShareButton>
+                  <ShareButton data={data}/>
                 </div>
               <br/>
             </center>
@@ -84,10 +84,11 @@ export default function Template({ data }) {
 }
 
 export const postQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query MetaDataConfig($path: String!) {
     site {
       siteMetadata {
-        topic
+        topic,
+        baseUrl
       }
     },
     markdownRemark(frontmatter: { path: { eq: $path } }) {

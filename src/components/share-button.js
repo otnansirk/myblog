@@ -1,4 +1,5 @@
 import React from 'react'
+// import { useStaticQuery } from 'gatsby'
 import {
   WhatsappShareButton,
   FacebookShareButton,
@@ -10,33 +11,36 @@ import {
   LinkedinIcon
 } from 'react-share'
 
-const shareButton = () => {
+const ShareButton = ({data}) => {
+  console.log()
+  const currentUrl = data.site.siteMetadata.baseUrl+data.markdownRemark.frontmatter.path
+  
   return (
     <div>
       <WhatsappShareButton
         className="button__share button__wa"
-        url="window.location.href"
+        url={currentUrl}
       >
         <WhatsappIcon className="button__share-button" size={30} borderRadius={5} ></WhatsappIcon>
       </WhatsappShareButton>
 
       <FacebookShareButton
         className="button__share button__fb"
-        url="window.location.href"
+        url={currentUrl}
       >
         <FacebookIcon className="button__share-button" size={30} borderRadius={5} />
       </FacebookShareButton>
 
       <TelegramShareButton
         className="button__share button__fb"
-        url="window.location.href"
+        url={currentUrl}
       >
         <TelegramIcon className="button__share-button" size={30} borderRadius={5} />
       </TelegramShareButton>
 
       <LinkedinShareButton
         className="button__share button__fb"
-        url="window.location.href"
+        url={currentUrl}
       >
         <LinkedinIcon className="button__share-button" size={30} borderRadius={5} />
       </LinkedinShareButton>
@@ -45,4 +49,4 @@ const shareButton = () => {
   )
 }
 
-export default shareButton
+export default ShareButton

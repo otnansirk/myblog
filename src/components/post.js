@@ -6,7 +6,6 @@ import GenerateTitle from './CleanPath'
 const menu = ({ frontmatter: payload}) => {
   return (
     <Link
-      onClick="window.location.reload();"
       to={ payload.frontmatter.path }
     >
       <div className="post-card">
@@ -18,7 +17,7 @@ const menu = ({ frontmatter: payload}) => {
         <div className="post-container">
           <br/>
           <span className="post-title title">
-              { GenerateTitle(payload.frontmatter.path).substring(0, 50) }...
+            { GenerateTitle(payload.frontmatter.path).substring(0, 50) }...
           </span>
           <br/>
           <small style={{color: `#757575`, fontSize:`14px`}}>
@@ -54,6 +53,4 @@ export const query = graphql`
     }
   }
 `
-
-
 export default menu

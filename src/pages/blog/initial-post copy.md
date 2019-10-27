@@ -1,6 +1,6 @@
 ---
 date: '2017-07-12 22:48'
-path: '/say-hello'
+path: '/say-hellos'
 thumbnail: 'images/default-image.png'
 tags: ['Hello']
 label: 'Hello'
