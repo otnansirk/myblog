@@ -6,6 +6,7 @@ import GenerateTitle from './CleanPath'
 const menu = ({ frontmatter: payload}) => {
   return (
     <Link
+      onClick="window.location.reload();"
       to={ payload.frontmatter.path }
     >
       <div className="post-card">
