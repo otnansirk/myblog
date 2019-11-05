@@ -113,7 +113,7 @@ export const postQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(limit:4) {
+    allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}, limit:4) {
       totalCount
       edges {
         node {
