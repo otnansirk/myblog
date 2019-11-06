@@ -26,7 +26,7 @@ main.py
 main.pyc
 ```
 
-File \`\_\_pycache\_\_\`,   \`\_\_init\_\_.py\` , \`\_\_init\_\_.pyc\` sebenarnya tidak diperlukan oleh developer. File-file ini justru direktori project kita menjadi terlihat berantakan dan membingungkan. 
+File `__pycache__`,`__init__.py` , `__init__.pyc` sebenarnya tidak diperlukan oleh developer. File-file ini justru direktori project kita menjadi terlihat berantakan dan membingungkan. 
 
 Untuk menyembunyikan nya kita perlu mengedit file \`setting.json\` pada VS Code. dan menambahkan settingan ini didalam \`files.exclude\`.
 
