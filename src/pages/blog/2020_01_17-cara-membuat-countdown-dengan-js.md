@@ -1,7 +1,7 @@
 ---
 date: '2020-01-17 08:59'
 path: /cara-membuat-countdown-dengan -js
-thumbnail: /assets/default-image.png
+thumbnail: /assets/countdown.png
 tags:
   - Belajar Laravel
   - Belajar Koding
