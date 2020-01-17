@@ -24,41 +24,71 @@ Kalian mesti sering melihat countdown time yang biasanya untuk menyambut tahun b
 
 Nah gimana sih cara buatnya langsung aja yang pertama buat html dengan struktur seperti ini.
 
-`<!DOCTYPE HTML>`
+```
+<!DOCTYPE HTML>
+```
 
-`<html>`
+```
+<html>
+```
 
-`<head>`
+```
+<head>
+```
 
-`<meta name="viewport" content="width=device-width, initial-scale=1">`
+```
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+```
 
-`<style>`
+```
+    <style>
+```
 
-` p {`
+```
+        p {
+```
 
-`   text-align: center;`
+```
+            text-align: center;
+```
 
-`   font-size: 60px;`
+```
+            font-size: 60px;
+```
 
-`   margin-top: 0px;`
+```
+            margin-top: 0px;
+```
 
-` }`
+```
+        }
+```
 
-`</style>`
+```
+    </style>
+```
 
-`</head>`
+```
+</head>
+```
 
-`<body>`
+```
 
-`<p id="demo"></p>`
+```
 
-`</body>`
+```
+<body>
+```
 
-`</html>`
+```
+    <p id="demo"></p>
+```
 
-``
+```
+</body>
+```
 
-
+</html>
 
 Setelah itu tambahkan script js nya
 
@@ -76,47 +106,47 @@ Setelah itu tambahkan script js nya
 
 ``
 
-`  // Get today's date and time`
+`// Get today's date and time`
 
-`  var now = new Date().getTime();`
+`var now = new Date().getTime();`
 
-`    `
+``
 
-`  // Find the distance between now and the count down date`
+`// Find the distance between now and the count down date`
 
-`  var distance = countDownDate - now;`
+`var distance = countDownDate - now;`
 
-`    `
+``
 
-`  // Time calculations for days, hours, minutes and seconds`
+`// Time calculations for days, hours, minutes and seconds`
 
-`  var days = Math.floor(distance / (1000 * 60 * 60 * 24));`
+`var days = Math.floor(distance / (1000 * 60 * 60 * 24));`
 
-`  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));`
+`var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));`
 
-`  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));`
+`var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));`
 
-`  var seconds = Math.floor((distance % (1000 * 60)) / 1000);`
+`var seconds = Math.floor((distance % (1000 * 60)) / 1000);`
 
-`    `
+``
 
-`  // Output the result in an element with id="demo"`
+`// Output the result in an element with id="demo"`
 
-`  document.getElementById("demo").innerHTML = days + " Hari " + hours + " Jam "`
+`document.getElementById("demo").innerHTML = days + " Hari " + hours + " Jam "`
 
-`  + minutes + " Menit " + seconds + " Detik ";`
+`+ minutes + " Menit " + seconds + " Detik ";`
 
-`    `
+``
 
-`  // If the count down is over, write some text `
+`// If the count down is over, write some text`
 
-`  if (distance < 0) {`
+`if (distance < 0) {`
 
-`    clearInterval(x);`
+`clearInterval(x);`
 
-`    document.getElementById("demo").innerHTML = "EXPIRED";`
+`document.getElementById("demo").innerHTML = "EXPIRED";`
 
-`  }`
+`}`
 
 `}, 1000);`
 
