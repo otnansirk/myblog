@@ -19,7 +19,7 @@ tags:
   - Belajar Slim
   - VS Code Editor
 label: Laravel
-author: Kris
+author: Akarsa
 ---
 Belajar docker yuk . 
 nah kali ini aku mau share gimana cara membuat docker file untuk 
