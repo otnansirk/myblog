@@ -21,135 +21,57 @@ label: Js
 author: Kris
 ---
 Kalian mesti sering melihat countdown time yang biasanya untuk menyambut tahun baru atau hari-hari besar lainnya. 
-
 Nah gimana sih cara buatnya langsung aja yang pertama buat html dengan struktur seperti ini.
-
 ```
 <!DOCTYPE HTML>
-```
-
-```
 <html>
-```
-
-```
-<head>
-```
-
-```
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-```
-
-```
-    <style>
-```
-
-```
-        p {
-```
-
-```
-            text-align: center;
-```
-
-```
-            font-size: 60px;
-```
-
-```
-            margin-top: 0px;
-```
-
-```
-        }
-```
-
-```
-    </style>
-```
-
-```
-</head>
-```
-
-```
-
-```
-
-```
-<body>
-```
-
-```
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            p {
+                text-align: center;
+                font-size: 60px;
+                margin-top: 0px;
+            }
+        </style>
+    </head>
+    <body>
     <p id="demo"></p>
-```
-
-```
-</body>
-```
-
+    </body>
 </html>
+```
 
 Setelah itu tambahkan script js nya
 
-`<script>`
+```
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 30, 2020 15:37:25").getTime();
 
-`// Set the date we're counting down to`
+    // Update the count down every 1 second
+    var x = setInterval(function() {
 
-`var countDownDate = new Date("Jan 30, 2020 15:37:25").getTime();`
+    // Get today's date and time
+    var now = new Date().getTime();
 
-``
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
 
-`// Update the count down every 1 second`
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-`var x = setInterval(function() {`
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + " Hari " + hours + " Jam " + minutes + " Menit " + seconds + " Detik ";
 
-``
-
-`// Get today's date and time`
-
-`var now = new Date().getTime();`
-
-``
-
-`// Find the distance between now and the count down date`
-
-`var distance = countDownDate - now;`
-
-``
-
-`// Time calculations for days, hours, minutes and seconds`
-
-`var days = Math.floor(distance / (1000 * 60 * 60 * 24));`
-
-`var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));`
-
-`var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));`
-
-`var seconds = Math.floor((distance % (1000 * 60)) / 1000);`
-
-``
-
-`// Output the result in an element with id="demo"`
-
-`document.getElementById("demo").innerHTML = days + " Hari " + hours + " Jam "`
-
-`+ minutes + " Menit " + seconds + " Detik ";`
-
-``
-
-`// If the count down is over, write some text`
-
-`if (distance < 0) {`
-
-`clearInterval(x);`
-
-`document.getElementById("demo").innerHTML = "EXPIRED";`
-
-`}`
-
-`}, 1000);`
-
-`</script>`
-
-``
+    // If the count down is over, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+    
+</script>
+```
