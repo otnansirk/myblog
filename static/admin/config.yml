@@ -42,7 +42,8 @@ collections:
             "Belajar CSS",
             "Belajar Git",
             "Belajar Slim",
-            "VS Code Editor"
+            "VS Code Editor",
+            "Belajar Database mongoDB"
           ]
         }
       - { 
@@ -63,7 +64,17 @@ collections:
             "GatsbyJs",
             "Lumen",
             "Network",
-            "GIT"
+            "GIT",
+            "Database",
+            "No Sql",
+            "Cassandra",
+            "MongoDB",
+            "Mysql"
+            "Sql",
+            "Python",
+            "Java",
+            "Flutter",
+            "Golang"
           ]
         }
       
