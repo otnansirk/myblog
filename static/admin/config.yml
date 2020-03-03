@@ -69,12 +69,14 @@ collections:
             "No Sql",
             "Cassandra",
             "MongoDB",
-            "Mysql"
+            "Mysql",
             "Sql",
             "Python",
             "Java",
             "Flutter",
-            "Golang"
+            "Golang",
+            "Hosting",
+            "VPS"
           ]
         }
       
