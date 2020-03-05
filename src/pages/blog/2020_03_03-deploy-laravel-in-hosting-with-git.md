@@ -26,6 +26,18 @@ Pertama pastikan hosting memiliki fitur ssh
 
 masuk hosting dengan SSH
 
+```
+ssh usernameMU@domainmu.com -p porthostingmu
+```
+
+biasanya postynya **64000**
+
+generate key 
+
+```
+ssh-keygen -t ecdsa -C "ISI email mu atau string yang lain untuk penanda ssh key mu"
+```
+
 lalu dapatkan ssh key dengan
 
 ```
@@ -35,8 +47,6 @@ cat .ssh/id_ecdsa.pub
 setelah itu masukkan key tersebut ke dalam keys yang berada di settingan akun git kalian (e.g. Gitlab atau Github).
 
 setelah itu masuk lagi ke ssh hosting dan clone project yang ada di repository dan jalankan aplikasi seperti biasa.
-
-
 
 > **Pointing ke domain.**
 
@@ -49,3 +59,9 @@ gunakan /public karena disanalah tempat index.php dari laravel.
 > **Setting DNS Zone Manager di akun domain.**
 
 pastikan Host name domain type A ke alamat address cpanel dimana tempat laravel dideploy sebelumnya.
+
+**Pasang ssh_key local ke hosting (_untuk login hosting dengan ssh tanpa password)_** 
+
+generate ssh_key di local komputer dan dapatkan ssh_key caranya sama sperti di atas(_tahap persiapan_).
+
+masuk lagi ke hosting dengan ssh lalu pergi ke folder `.ssh/` dan pastekan ssh_key local ke dalam file `authorized_keys` lalu save.
