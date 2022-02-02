@@ -1,6 +1,6 @@
 ---
 date: '2022-01-15 20:41'
-path: /how-to-fixed-can't-login-netligy-cms-with-github
+path: /how-to-fixed-can't-login-netlify-cms-with-github
 thumbnail: /assets/default-image.png
 tags:
   - Belajar Laravel
