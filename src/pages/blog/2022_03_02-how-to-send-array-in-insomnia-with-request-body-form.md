@@ -35,6 +35,4 @@ this will transform to
    qty: [1,2]
 ```
 
-
-
 ![how-to-send-array-in-insomnia-with-request-body-form](/assets/screenshot-from-2022-03-02-09-55-55.png "Image 1")
