@@ -29,7 +29,18 @@ Steps :
 
 1. install extension sonarlint di vscode
 2. pastikan sudah install java minimal versi 11. jika belum bisa lewat  https://rebrand.ly/z6ryft3
-3. update setting.json tambahkan settingan berikut
+3. Generate token di akun sonarqube.
+```
+Login dengan gitlab
+
+Login di : https://sonar.dashboard.net/
+Generate Token : Klik photo profile -> my account -> security -> Generate tokens -> masukkan nama token lalau generate.
+
+Token ini yang akan digunakan di setting.json vscode
+
+```
+
+1. update setting.json tambahkan settingan berikut
 
 
 ```
