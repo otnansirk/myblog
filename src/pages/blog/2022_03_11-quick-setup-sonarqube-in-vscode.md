@@ -35,8 +35,8 @@ Steps :
 ```
 "sonarlint.connectedMode.connections.sonarqube": [
     {
-        "serverUrl": "https://sonar.getih.net",
-        "token": "4a18d634fd2ace27207a221f3022fb39e84708f2",
+        "serverUrl": "https://sonar.dashboard.net",
+        "token": "4r18d6e4fd2acwe27207a221fd3022fb39e4708f2",
     },
 ],
 "sonarlint.ls.javaHome": "/usr/lib/jvm/java-11-openjdk-amd64"
