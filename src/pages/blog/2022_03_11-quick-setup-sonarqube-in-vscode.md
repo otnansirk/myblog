@@ -28,7 +28,7 @@ Sonarqube adalah sebuah platform dimana akan mengontrol kode dengan cara penguji
 Steps : 
 
 1. install extension sonarlint di vscode
-2. pastikan sudah install java versi minimal 11
+2. pastikan sudah install java minimal versi 11. jika belum bisa lewat  https://rebrand.ly/z6ryft3
 3. update setting.json tambahkan settingan berikut
 
 
