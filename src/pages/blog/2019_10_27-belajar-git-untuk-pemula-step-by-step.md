@@ -8,6 +8,10 @@ label: GIT
 author: Kris
 ---
 Beberapa hari yang lalu saya coba buka-buka repository github dari serior saya
+
+![](/assets/otnansirk.png)
+
+
 [@akuikialie](https://github.com/akuikialie)
 dan saya menemukan kembali E-book yang menjadi dasar saya belajar git dengan judul
 `git-pinter`. Dari situ lah tulisan ini tercipta. 😄.
